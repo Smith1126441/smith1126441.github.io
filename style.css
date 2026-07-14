@@ -1,0 +1,21 @@
+/* Custom resets or micro-adjustments not covered by Tailwind */
+body {
+    /* Slightly improve text rendering for dark theme */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optional smooth fade-in effect on load */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main > section {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Ensure smooth scrolling when anchor tags are clicked */
+html {
+    scroll-behavior: smooth;
+}
